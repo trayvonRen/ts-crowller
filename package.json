@@ -1,0 +1,35 @@
+{
+  "name": "tsStudy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "_typescript@3.9.5@typescript": "^3.9.5",
+    "cheerio": "^1.0.0-rc.3",
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "reflect-metadata": "^0.1.13",
+    "superagent": "^5.2.2",
+    "typescript": "^3.9.5"
+  },
+  "devDependencies": {
+    "@types/cookie-session": "^2.0.40",
+    "@types/express": "^4.17.6",
+    "@types/superagent": "^4.1.7",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2"
+  },
+  "scripts": {
+    "dev": "concurrently npm:dev:*",
+    "dev:build": "tsc -w",
+    "dev:start": "tsc && nodemon node ./build/index.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "data/*"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
