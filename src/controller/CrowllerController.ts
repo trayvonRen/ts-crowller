@@ -21,7 +21,7 @@ const checkLogin = (req: Request, res: Response, next: NextFunction): void => {
   }
 }
 
-@controller('/')
+@controller('/api')
 export class CrowllerController {
   @get('/getData')
   @use(checkLogin)
